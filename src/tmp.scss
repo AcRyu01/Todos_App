@@ -1,0 +1,123 @@
+$base: #faedc6;
+$light-base: #ffece8;
+$white: #fff;
+$green: #3e8e7e;
+$yellow: #fabb51;
+$red: #c84b31;
+$blue: #287fcb;
+$dark: #041c32;
+.App {
+  box-sizing: border-box;
+  // text-align: center;
+  width: 90%;
+  height: auto;
+  margin: 2rem auto;
+  padding: 1rem 1rem;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 3vw, 20px);
+  background: $base;
+  color: $dark;
+  // max-width: 1260px;
+}
+a,
+u {
+  text-decoration: none;
+}
+div {
+  display: block;
+}
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.home {
+  .head {
+    background-color: $yellow;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      color: $dark;
+      font-size: clamp(16px, 3vw, 80px);
+      margin-right: 0.5rem;
+    }
+    .signout {
+      white-space: nowrap;
+      font-size: clamp(16px, 3vw, 80px);
+      background: #dd4a48;
+      color: $white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+  .input {
+    margin-top: 10px;
+    padding: 10px;
+    button {
+      margin-left: 1rem;
+      padding: 0.7rem 1rem;
+      background: $green;
+      color: $white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+    input {
+      outline: none;
+      &:focus {
+        border: 3px solid $green;
+      }
+      border-radius: 15px;
+      padding: 0.2rem 0.8rem;
+      width: 60%;
+      height: 1.5rem;
+      border: 3px solid $dark;
+    }
+  }
+  .todoList {
+    .todo {
+      padding: 1.5rem 5rem;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .del {
+      margin-left: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: $red;
+      color: $white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+}
+.login {
+  align-items: center;
+  h1 {
+    color: $dark;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    background: $blue;
+    color: $white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+}

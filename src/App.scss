@@ -1,0 +1,171 @@
+$base: #faedc6;
+$light-base: #ffece8;
+$white: #fff;
+$green: #3e8e7e;
+$yellow: #fabb51;
+$red: #c84b31;
+$blue: #287fcb;
+$dark: #041c32;
+$major: 2rem;
+$minor: 1rem;
+.App {
+  box-sizing: border-box;
+  text-align: center;
+  min-height: 90vh;
+  height: 100%;
+  width: 90vw;
+  margin: 5vh 5vw;
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: clamp(12px, 24px, 42px);
+  background: $base;
+  color: $dark;
+}
+
+.home {
+  .head {
+    background-color: $yellow;
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-size: $major;
+      color: $dark;
+      margin-right: $major;
+      text-align: start;
+    }
+    button {
+      font-size: $minor;
+      padding: 0.5rem 1rem;
+      background: #dd4a48;
+      color: $white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+  .input {
+    margin-top: 20px;
+    padding: 20px;
+    button {
+      font-size: $minor;
+      margin-left: 1.5rem;
+      padding: 0.5rem 1rem;
+      background: $green;
+      color: $white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    input {
+      font-size: $minor;
+      outline: none;
+      border-radius: 15px;
+      padding: 0.5rem 1rem;
+      height: 1.5rem;
+      border: 3px solid $dark;
+      &:focus {
+        border: 3px solid $green;
+      }
+    }
+  }
+  .todoTxt {
+    font-size: $major;
+  }
+  .todoList {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    .todo {
+      padding: 1.5rem 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h4 {
+        font-size: $minor;
+      }
+      .del {
+        margin-left: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: $red;
+        color: $white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      .txt {
+        padding: 0rem 1rem;
+        font-size: $minor;
+        overflow: hidden;
+        text-overflow: clip;
+      }
+    }
+  }
+  .hidden {
+    display: none;
+  }
+}
+.login {
+  align-items: center;
+  h1 {
+    color: $dark;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    background: $blue;
+    color: $white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home {
+    .head {
+      button {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .home {
+    .head {
+      display: block;
+      button {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        white-space: nowrap;
+      }
+    }
+    .input {
+      input {
+        width: 80%;
+      }
+      button {
+        font-size: 1.5rem;
+      }
+    }
+    .todoList {
+      .todo {
+        padding: 0.5rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h4 {
+          display: none;
+        }
+        .txt {
+          font-size: 1rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
