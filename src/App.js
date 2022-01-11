@@ -15,6 +15,7 @@ function App() {
     });
   }, []);
   console.log(user);
+  console.log(process.env);
 
   return <div className="App">{user ? <Home user={user} /> : <Login />}</div>;
 }
